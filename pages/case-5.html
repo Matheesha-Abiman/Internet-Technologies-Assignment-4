@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case-5</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .image {
+            display: flex;
+            width: 400%;
+            animation: slide 25s infinite alternate ease-in-out;
+        }
+
+        .img {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+        }
+
+        @keyframes slide {
+
+            0%,
+            10% {
+                transform: translateX(-300vw);
+                /* Start from Image 4 */
+            }
+
+            15%,
+            25% {
+                transform: translateX(-200vw);
+                /* Move to Image 3 */
+            }
+
+            30%,
+            40% {
+                transform: translateX(-100vw);
+                /* Move to Image 2 */
+            }
+
+            45%,
+            55% {
+                transform: translateX(0);
+                /* Move to Image 1 */
+            }
+
+            60%,
+            70% {
+                transform: translateX(-100vw);
+                /* Back to Image 2 */
+            }
+
+            75%,
+            85% {
+                transform: translateX(-200vw);
+                /* Back to Image 3 */
+            }
+
+            90%,
+            100% {
+                transform: translateX(-300vw);
+                /* Back to Image 4 */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image">
+            <img class="img" src="/media/images/image10.jpg" alt="image1">
+            <img class="img" src="/media/images/image12.jpg" alt="image2">
+            <img class="img" src="/media/images/image2.jpg" alt="image3">
+            <img class="img" src="/media/images/image6.jpg" alt="image4">
+        </div>
+    </div>
+</body>
+
+</html>

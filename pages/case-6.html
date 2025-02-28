@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case-6</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 950px;
+            overflow: hidden;
+        }
+
+        .image_sky {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 80%;
+            object-fit: cover;
+        }
+
+        .image_city {
+            position: absolute;
+            top: 40%;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            object-fit: cover;
+            animation: city 6s linear infinite;
+        }
+
+        /* Duplicate city image for seamless scrolling */
+        .image_city2 {
+            position: absolute;
+            top: 40%;
+            left: 100%;
+            width: 100%;
+            height: 40%;
+            object-fit: cover;
+            animation: city 6s linear infinite;
+        }
+
+        .car_container {
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20%;
+            z-index: 2;
+        }
+
+        .image_car {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .image_wheel1,
+        .image_wheel2 {
+            position: absolute;
+            width: 20%;
+            height: auto;
+            object-fit: contain;
+            animation: rotateWheels 3s linear infinite;
+        }
+
+        .image_wheel1 {
+            top: 50%;
+            left: 8%;
+        }
+
+        .image_wheel2 {
+            top: 50%;
+            left: 69%;
+        }
+
+        .image_road {
+            position: absolute;
+            top: 80%;
+            left: 0;
+            width: 100%;
+            height: 25%;
+            object-fit: cover;
+            z-index: 1;
+            animation: road 6s linear infinite;
+        }
+
+        /* Duplicate road image for seamless scrolling */
+        .image_road2 {
+            position: absolute;
+            top: 80%;
+            left: 100%;
+            width: 100%;
+            height: 25%;
+            object-fit: cover;
+            z-index: 1;
+            animation: road 6s linear infinite;
+        }
+
+        @keyframes rotateWheels {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes city {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        @keyframes road {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="image_sky" src="/media/images/sky.jpg" alt="Sky">
+        <img class="image_city" src="/media/images/city.png" alt="City">
+        <img class="image_city2" src="/media/images/city.png" alt="City Duplicate">
+        <div class="car_container">
+            <img class="image_car" src="/media/images/car.png" alt="Car">
+            <img class="image_wheel1" src="/media/images/wheel.png" alt="Wheel 1">
+            <img class="image_wheel2" src="/media/images/wheel.png" alt="Wheel 2">
+        </div>
+        <img class="image_road" src="/media/images/road.jpg" alt="Road">
+        <img class="image_road2" src="/media/images/road.jpg" alt="Road Duplicate">
+    </div>
+</body>
+
+</html>

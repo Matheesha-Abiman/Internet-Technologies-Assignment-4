@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case-1</title>
+    <style>
+        .box {
+            height: 70px;
+            width: 320px;
+            background-color: purple;
+            margin-top: 85px;
+            margin-bottom: 100px;
+            position: relative;
+            left: -240px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 3, 10);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            transition: left 1s ease-in-out;
+        }
+
+        .box:hover {
+            left: -10px;
+        }
+
+        .label {
+            padding-left: 25px;
+            color: white;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        .image {
+            padding-right: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+    <div class="box b1"><label class="label l1" for="">Menu One</label><img class="image i1"
+            src="/media/images/icons8-contact-48.png" alt=""></div>
+    <div class="box b1"><label class="label l1" for="">Menu Two</label><img class="image i2"
+            src="/media/images/icons8-ambulance-60.png" alt=""></div>
+    <div class="box b1"><label class="label l1" for="">Menu Three</label><img class="image i3"
+            src="/media/images/icons8-geography-book-50.png" alt=""></div>
+    <div class="box b1"><label class="label l1" for="">Menu Four</label><img class="image i4"
+            src="/media/images/icons8-layers-48.png" alt=""></div>
+    <div class="box b1"><label class="label l1" for="">Menu Five</label><img class="image i5"
+            src="/media/images/icons8-cart-64.png" alt=""></div>
+</body>
+
+</html>

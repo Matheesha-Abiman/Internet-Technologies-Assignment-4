@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case-3</title>
+    <style>
+        .rectangle {
+            height: 120px;
+            width: 260px;
+            background-color: blue;
+            border-radius: 30px;
+            position: absolute;
+            animation: go-around 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes go-around {
+            0% {
+                top: 0;
+                left: 0;
+                background-color: blue;
+                transform: rotate(0deg);
+            }
+
+            25% {
+                top: 0;
+                left: calc(100vw - 260px);
+                background-color: yellow;
+                transform: rotate(180deg);
+            }
+
+            50% {
+                top: calc(100vh - 120px);
+                left: calc(100vw - 260px);
+                background-color: orange;
+                transform: rotate(360deg);
+            }
+
+            75% {
+                top: calc(100vh - 120px);
+                left: 0;
+                background-color: red;
+                transform: rotate(180deg);
+            }
+
+            100% {
+                top: 0;
+                left: 0;
+                background-color: blue;
+                transform: rotate(0deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="rectangle"></div>
+    </div>
+</body>
+
+</html>
