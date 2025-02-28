@@ -31,7 +31,6 @@ The following cases have been implemented using only HTML and CSS:
 ## Author
 
 **Matheesha Abiman**  
-Undergraduate Student at IJSE | Passionate about Coding and Software Development
 
 Feel free to explore and contribute!
 
